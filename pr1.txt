@@ -13,8 +13,6 @@ from below view
 worm eye view
 close up
 extreme close up
-
-
 asian
 southeas asian
 african
@@ -22,80 +20,21 @@ european
 causcasian
 mongoloid
 negroid
-
-afro hair style
-bob cut hair style
-pixie cut hair style
-long layer hair style
-beach waves hair style
-bangs hair style
-braids hair style
-top knot hair style
-undercut hair style
-shag cut hair style
-layered bob hair style
-curly hair style
-sleek straight hair style
-side swept bang hair style
-balerina bun hair style
-mehawk hair style
-ombre hair style
-box braids hair style
-half up half down hair style
-high ponytail hair style
-messy bun hair style
-fishtail braid hair style
-waterfall braid hair style
-dreadlocks hair style
-cornrows hair style
-bold shiny hair style
-afro hair style
-buzz cut hair style
-crew cut hair style
-pompadour hair style
-long hair style
-flow hair style
-messy hair style
-morissey hair style
-side parted hair style
-comma hair style
-shaggy hair style
-french hair style
-comb hair style
-man bun hair style
-spiky hair style
-two blocks hair style
-quiff hair style
-fringe hair style
-crop cut hair style
-induction curl hair style
-hight and tight cut hair style
-curtain haircut hair style
-slick back hair style
-medium hair style
-bowl hair style
-
 pretty
 chubby
 overweight
 obese
 muscular
 fit
-
-
 man
 boy
 girl
 baby
 kid
-
-
 with moustache
 with tattoo
 with dimples
 with thick eyelashes
-
-
 humanoid
 anthropomorphic
 robotic
@@ -106,7 +45,6 @@ daemon
 goblin
 gremlin
 orc
-
 superman
 spiderman
 batman
@@ -166,7 +104,6 @@ puss in boots
 lumiere
 chihiro ogino
 master shifu
-
 bird
 cat
 dog
@@ -259,7 +196,6 @@ mammoth
 rat
 snake
 peacock
-
 alchemist
 assasin
 barbarian
@@ -272,7 +208,6 @@ thief
 warrior
 witch
 wizard worker
-
 elevating eyebrows
 smirking
 frowning
@@ -306,9 +241,6 @@ quizzical expression
 half-lidded eyes
 cocky smirk
 raised uper lip
-
-
-up
 photorealistic
 dramatic
 dramatic color
@@ -322,26 +254,6 @@ hyper detailed
 colorful
 atmosphere
 cinematic
-art by peter mohrbacher
-art by ilya kuvshinov
-art by hajime sorayama
-art by wayne barlowe
-art by boris vallejo
-art by aaron horkey
-art by gaston bussiere
-art by craig mullins
-art by wlop
-art by ismail inceoglu
-art by cory loftis
-art by akihiko yoshida
-art by james gilleard
-art by atey ghailan
-art by makoto shinkai
-art by goro fujita
-art by peter mohrbacher
-art by greg rutkowski
-art by artgerm
-art by alphonse mucha
 Chromatic aberration
 glitch art
 glitchy
@@ -387,15 +299,9 @@ unreal engine 5
 octane render
 vray render
 arnold render
-houdini
-terragen
 soft painting
 clear focus
-vfx
-8k
-8k 3d
-4k
-4k 3d
+3d
 realistic
 super realistic
 hyper realistic
@@ -458,12 +364,9 @@ Item Icons
 3D Anime Avatar
 round cute face
 horizon zero dawn
-world war
 world war 2
-world war 3
 Everlasting summer
 Fate/Stay night
-hdr
 fanart
 artworks
 other dimention
@@ -488,7 +391,7 @@ Retro Psychedelic Posters
 Techno Marble
 Synth
 Synthwave art
-Your Name anime art style
+anime art style
 Nature Sunsets
 Sunsets
 Synthwave
