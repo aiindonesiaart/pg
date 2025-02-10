@@ -13,6 +13,302 @@ from below view
 worm eye view
 close up
 extreme close up
+
+
+asian
+southeas asian
+african
+european
+causcasian
+mongoloid
+negroid
+
+afro hair style
+bob cut hair style
+pixie cut hair style
+long layer hair style
+beach waves hair style
+bangs hair style
+braids hair style
+top knot hair style
+undercut hair style
+shag cut hair style
+layered bob hair style
+curly hair style
+sleek straight hair style
+side swept bang hair style
+balerina bun hair style
+mehawk hair style
+ombre hair style
+box braids hair style
+half up half down hair style
+high ponytail hair style
+messy bun hair style
+fishtail braid hair style
+waterfall braid hair style
+dreadlocks hair style
+cornrows hair style
+bold shiny hair style
+afro hair style
+buzz cut hair style
+crew cut hair style
+pompadour hair style
+long hair style
+flow hair style
+messy hair style
+morissey hair style
+side parted hair style
+comma hair style
+shaggy hair style
+french hair style
+comb hair style
+man bun hair style
+spiky hair style
+two blocks hair style
+quiff hair style
+fringe hair style
+crop cut hair style
+induction curl hair style
+hight and tight cut hair style
+curtain haircut hair style
+slick back hair style
+medium hair style
+bowl hair style
+
+pretty
+chubby
+overweight
+obese
+muscular
+fit
+
+
+man
+boy
+girl
+baby
+kid
+
+
+with moustache
+with tattoo
+with dimples
+with thick eyelashes
+
+
+humanoid
+anthropomorphic
+robotic
+sculpture
+elf
+dwarf
+daemon
+goblin
+gremlin
+orc
+
+superman
+spiderman
+batman
+mickymouse
+donald duck
+garfield
+pinocchio
+cinderella
+peter pan
+robin hood
+aladdin
+hercules
+tarzan
+dinosaur
+bolt
+winnie the pooh
+toy story
+finding nemo
+cars
+wall-e
+super mario
+shrek
+woody
+homer simpson
+bugs bunny
+pink panthaer
+tom cat
+snoopy
+mr krabs
+squidward
+maui
+patrick star
+mrs krabs
+spongebob
+plankton
+gary
+fred flinstone
+captain mook
+carl fredericksen
+daffy duck
+woody
+baloo
+genie
+buzz lightyear
+jezzica rabit
+jack skellington
+maleficent
+lilo pelekai
+donkey
+mirabel madrigal
+elsa
+roger rabit
+thumper
+fiver
+katie mitchel
+puss in boots
+lumiere
+chihiro ogino
+master shifu
+
+bird
+cat
+dog
+duck
+dragon
+eagle
+frog
+horse
+tiger
+lion
+panther
+leopard
+cheetah
+bear
+elephant
+turtle
+tortoise
+crocodile
+rabbit
+porcupine
+hare
+hen
+pigeon
+dolphine
+whale
+alligator
+squirrel
+ostrich
+fox
+goat
+jackal
+emu
+armadillo
+eel
+goose
+wolf
+beagle
+gorilla
+chimpanzee
+monkey
+beaver
+orangutan
+antelope
+bat
+badger
+giraffe
+hermit crab
+panda
+hamster
+cobra
+shark
+camel
+hawk
+deer
+chamelon
+hippopotamus
+jaguar
+chihuahua
+ibex
+lizard
+koala
+kangaroo
+iguana
+llama
+chinchilas
+dodo
+jellyfish
+rhinoceros
+hedgehog
+zebra
+possum
+bison
+bull
+buffalo
+sheep
+meerket
+multure
+mouse
+flamingo
+sloth
+racoon
+mole
+swan
+lynx
+boar
+lemur
+mule
+baboon
+mammoth
+rat
+snake
+peacock
+
+alchemist
+assasin
+barbarian
+druid
+hunter
+knight
+mage
+priest
+thief
+warrior
+witch
+wizard worker
+
+elevating eyebrows
+smirking
+frowning
+squinting
+widening eyes
+grimacing
+blinking rapidly
+rolling eyes
+narrowing eyes
+open mouth surprise
+raised eyebrow
+wrinked nose
+bitting lip
+flared nostrils
+half smile
+winking
+clenched teeth
+raised cheeks
+tensed forehead
+furrowed brow
+twitching eye
+open-muthed laugh
+brow flash
+asymetrical smile
+one-eyed squint
+nose wrinkle
+lip corner pull-down
+pensive look
+sneer
+quizzical expression
+half-lidded eyes
+cocky smirk
+raised uper lip
+
+
+up
 photorealistic
 dramatic
 dramatic color
