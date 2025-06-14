@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 Adobe Stock 2025: Interior Design Trends Prompt Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 50%, #4A240C 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 50%, #4A240C 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: headerShine 4s infinite;
+        }
+
+        @keyframes headerShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header h1 {
+            font-size: 2.6em;
+            margin-bottom: 15px;
+            text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .trend-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            padding: 15px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            color: #495057;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+            color: white;
+            border-color: #8B4513;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(139, 69, 19, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.2em;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .preset-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 20px;
+            margin: 30px 0;
+            border-left: 5px solid #8B4513;
+        }
+
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .preset-btn {
+            background: linear-gradient(135deg, #F5E6D3 0%, #E6D2B8 100%);
+            border: 2px solid #D2B48C;
+            padding: 15px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: center;
+            color: #8B4513;
+        }
+
+        .preset-btn:hover {
+            background: linear-gradient(135deg, #D2B48C 0%, #8B4513 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(210, 180, 140, 0.4);
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .control-group {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 20px;
+            border-left: 5px solid #8B4513;
+            transition: all 0.3s;
+        }
+
+        .control-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .control-group h3 {
+            color: #6B3410;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 15px;
+            background: white;
+            transition: all 0.3s;
+            color: #495057;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #8B4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+
+        .trend-info {
+            background: linear-gradient(135deg, #F5E6D3 0%, #FFF8DC 100%);
+            border: 2px solid #D2B48C;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .trend-info h4 {
+            color: #6B3410;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .trend-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            font-size: 14px;
+            color: #424242;
+        }
+
+        .tip-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #D2B48C;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.4);
+        }
+
+        .btn-midjourney {
+            background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+            box-shadow: 0 8px 20px rgba(114, 137, 218, 0.3);
+        }
+
+        .btn-midjourney:hover {
+            box-shadow: 0 15px 35px rgba(114, 137, 218, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.3);
+        }
+
+        .midjourney-section {
+            background: linear-gradient(135deg, #7289da 0%, #5865f2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            box-shadow: 0 15px 35px rgba(114, 137, 218, 0.3);
+        }
+
+        .midjourney-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        .midjourney-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .mj-control-group {
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #fff;
+        }
+
+        .mj-control-group h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .mj-control-group select {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+        }
+
+        .result {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 3px solid #8B4513;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 15px 35px rgba(139, 69, 19, 0.2);
+        }
+
+        .result h3 {
+            color: #6B3410;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        .prompt-text {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #8B4513;
+            line-height: 1.7;
+            font-size: 15px;
+            word-wrap: break-word;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .copy-btn {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(23, 162, 184, 0.4);
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, #8B4513 0%, #6B3410 100%);
+            margin: 40px 0;
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+
+        .support-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .support-title {
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .support-text {
+            color: white;
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .features-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+            font-size: 14px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .donate-btn {
+            background: linear-gradient(135deg, #D2B48C 0%, #8B4513 100%);
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 30px rgba(210, 180, 140, 0.4);
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(210, 180, 140, 0.6);
+        }
+
+        .heart-icon {
+            animation: heartbeat 2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .footer {
+            background: #f8f9fa;
+            text-align: center;
+            padding: 30px;
+            color: #6c757d;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+
+            .controls {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>🏠 Interior Design Trends Generator</h1>
+                <p>Adobe Stock 2025 untuk Mocha Tones, Natural Materials & Smart Living - 100% tanpa makhluk hidup</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number">62M+</span>
+                    <span class="stat-label">Interior Images di Adobe Stock</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">43%</span>
+                    <span class="stat-label">Designer Butuh Sustainability</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">35%</span>
+                    <span class="stat-label">Peningkatan "Cozy" Demand</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">71%</span>
+                    <span class="stat-label">Prefer Colorful Kitchen</span>
+                </div>
+            </div>
+
+            <div class="trend-tabs">
+                <button class="tab-btn active" onclick="switchTab('mocha-earth')">🤎 Mocha & Earth Tones</button>
+                <button class="tab-btn" onclick="switchTab('jewel-metallic')">💎 Jewel & Metallic</button>
+                <button class="tab-btn" onclick="switchTab('natural-materials')">🌿 Natural Materials</button>
+                <button class="tab-btn" onclick="switchTab('smart-living')">🏡 Smart Living</button>
+            </div>
+
+            <!-- Mocha & Earth Tones Tab -->
+            <div id="mocha-earth-tab" class="tab-content">
+                <div class="trend-info">
+                    <h4>🤎 2025 Mocha & Earth Tones Trends:</h4>
+                    <div class="trend-tips">
+                        <div class="tip-item"><strong>☕ Mocha Mousse:</strong> Pantone Color of the Year 2025</div>
+                        <div class="tip-item"><strong>🍂 Clay Browns:</strong> Natural warmth & earth connection</div>
+                        <div class="tip-item"><strong>🌰 Wood Spectrum:</strong> Light oak hingga dark walnut</div>
+                        <div class="tip-item"><strong>🏺 Terracotta Accents:</strong> Organic ceramic elements</div>
+                    </div>
+                </div>
+
+                <div class="preset-section">
+                    <h3 style="color: #6B3410; margin-bottom: 20px;">🚀 Mocha & Earth Presets (2025 Trends)</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setMochaPreset('mocha-living')">☕ Mocha Living Room</button>
+                        <button class="preset-btn" onclick="setMochaPreset('earth-kitchen')">🤎 Earth Tone Kitchen</button>
+                        <button class="preset-btn" onclick="setMochaPreset('clay-bathroom')">🏺 Clay Bathroom Spa</button>
+                        <button class="preset-btn" onclick="setMochaPreset('walnut-office')">🌰 Walnut Home Office</button>
+                        <button class="preset-btn" onclick="setMochaPreset('terracotta-dining')">🍂 Terracotta Dining</button>
+                        <button class="preset-btn" onclick="setMochaPreset('brown-bedroom')">🤎 Brown Sanctuary</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jewel & Metallic Tab -->
+            <div id="jewel-metallic-tab" class="tab-content hidden">
+                <div class="trend-info">
+                    <h4>💎 2025 Jewel & Metallic Insights:</h4>
+                    <div class="trend-tips">
+                        <div class="tip-item"><strong>💚 Emerald Green:</strong> Luxury jewel tone accents</div>
+                        <div class="tip-item"><strong>🔵 Sapphire Blue:</strong> Deep dramatic sophistication</div>
+                        <div class="tip-item"><strong>🥇 Mixed Metals:</strong> Brass-black combinations trending</div>
+                        <div class="tip-item"><strong>✨ Chrome Revival:</strong> Silver metallic comeback</div>
+                    </div>
+                </div>
+
+                <div class="preset-section">
+                    <h3 style="color: #6B3410; margin-bottom: 20px;">🚀 Jewel & Metallic Presets (2025 Trends)</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setJewelPreset('emerald-luxury')">💚 Emerald Luxury Suite</button>
+                        <button class="preset-btn" onclick="setJewelPreset('sapphire-kitchen')">🔵 Sapphire Kitchen</button>
+                        <button class="preset-btn" onclick="setJewelPreset('brass-black')">🖤 Brass-Black Modern</button>
+                        <button class="preset-btn" onclick="setJewelPreset('chrome-bathroom')">✨ Chrome Revival Bath</button>
+                        <button class="preset-btn" onclick="setJewelPreset('gold-dining')">🥇 Gold Accent Dining</button>
+                        <button class="preset-btn" onclick="setJewelPreset('copper-living')">🔶 Copper Living Space</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Natural Materials Tab -->
+            <div id="natural-materials-tab" class="tab-content hidden">
+                <div class="trend-info">
+                    <h4>🌿 2025 Natural Materials Trends:</h4>
+                    <div class="trend-tips">
+                        <div class="tip-item"><strong>🏺 Ceramics & Clay:</strong> Organic appeal dalam lighting & tables</div>
+                        <div class="tip-item"><strong>🪨 Natural Stone:</strong> Travertine, Calacatta, Caramela</div>
+                        <div class="tip-item"><strong>🌱 Sustainable Focus:</strong> 43% projects need sustainability</div>
+                        <div class="tip-item"><strong>✋ Handcrafted Elements:</strong> Artisan collaboration revival</div>
+                    </div>
+                </div>
+
+                <div class="preset-section">
+                    <h3 style="color: #6B3410; margin-bottom: 20px;">🚀 Natural Materials Presets (2025 Trends)</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setNaturalPreset('ceramic-kitchen')">🏺 Ceramic Kitchen</button>
+                        <button class="preset-btn" onclick="setNaturalPreset('stone-bathroom')">🪨 Stone Spa Bathroom</button>
+                        <button class="preset-btn" onclick="setNaturalPreset('wood-living')">🌳 Wood Living Room</button>
+                        <button class="preset-btn" onclick="setNaturalPreset('sustainable-office')">🌱 Sustainable Office</button>
+                        <button class="preset-btn" onclick="setNaturalPreset('artisan-dining')">✋ Artisan Dining</button>
+                        <button class="preset-btn" onclick="setNaturalPreset('organic-bedroom')">🍃 Organic Bedroom</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart Living Tab -->
+            <div id="smart-living-tab" class="tab-content hidden">
+                <div class="trend-info">
+                    <h4>🏡 2025 Smart Living Insights:</h4>
+                    <div class="trend-tips">
+                        <div class="tip-item"><strong>🤖 Technology Integration:</strong> Smart home aesthetically pleasing</div>
+                        <div class="tip-item"><strong>💪 Wellness Spaces:</strong> Home gym, meditation, reading nooks</div>
+                        <div class="tip-item"><strong>🔧 Multi-functional:</strong> Adaptable furniture untuk small spaces</div>
+                        <div class="tip-item"><strong>💡 Circadian Lighting:</strong> Light yang support natural rhythms</div>
+                    </div>
+                </div>
+
+                <div class="preset-section">
+                    <h3 style="color: #6B3410; margin-bottom: 20px;">🚀 Smart Living Presets (2025 Trends)</h3>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setSmartPreset('home-office')">💻 Smart Home Office</button>
+                        <button class="preset-btn" onclick="setSmartPreset('wellness-room')">💪 Wellness Room</button>
+                        <button class="preset-btn" onclick="setSmartPreset('multifunctional')">🔧 Multi-functional Space</button>
+                        <button class="preset-btn" onclick="setSmartPreset('smart-kitchen')">🏡 Smart Kitchen Tech</button>
+                        <button class="preset-btn" onclick="setSmartPreset('meditation-corner')">🧘 Meditation Corner</button>
+                        <button class="preset-btn" onclick="setSmartPreset('reading-nook')">📚 Cozy Reading Nook</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls" id="mocha-earth-controls">
+                <div class="control-group">
+                    <h3>🤎 Brown Color Palette</h3>
+                    <select id="brownPalette">
+                        <option value="mocha mousse pantone 2025">Mocha Mousse (Pantone 2025)</option>
+                        <option value="clay toned brown earthy">Clay-Toned Brown</option>
+                        <option value="rich mahogany dark">Rich Mahogany Dark</option>
+                        <option value="light oak natural">Light Oak Natural</option>
+                        <option value="walnut deep chocolate">Walnut Deep Chocolate</option>
+                        <option value="caramel warm brown">Caramel Warm Brown</option>
+                        <option value="espresso dark brown">Espresso Dark Brown</option>
+                        <option value="terracotta clay orange">Terracotta Clay Orange</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <h3>🏠 Room Type</h3>
+                    <select id="roomType">
+                        <option value="modern living room">Modern Living Room</option>
+                        <option value="contemporary kitchen">Contemporary Kitchen</option>
+                        <option value="spa bathroom">Spa Bathroom</option>
+                        <option value="home office workspace">Home Office Workspace</option>
+                        <option value="dining room">Dining Room</option>
+                        <option value="master bedroom">Master Bedroom</option>
+                        <option value="reading nook corner">Reading Nook Corner</option>
+                        <option value="meditation space">Meditation Space</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <h3>🎨 2025 Interior Style</h3>
+                    <select id="interiorStyle">
+                        <option value="japandi minimalist zen">Japandi Minimalist Zen</option>
+                        <option value="warm minimalism cozy">Warm Minimalism Cozy</option>
+                        <option value="maximalist layered textures">Maximalist Layered Textures</option>
+                        <option value="scandinavian evolved modern">Scandinavian Evolved Modern</option>
+                        <option value="retro futurism blend">Retro-Futurism Blend</option>
+                        <option value="sustainable eco luxury">Sustainable Eco Luxury</option>
+                        <option value="artisan crafted organic">Artisan Crafted Organic</option>
+                        <option value="quiet luxury understated">Quiet Luxury Understated</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <h3>🪑 Furniture Elements</h3>
+                    <select id="furnitureElements">
+                        <option value="low slung 1970s inspired">Low-Slung 1970s Inspired</option>
+                        <option value="curved scalloped shapes">Curved Scalloped Shapes</option>
+                        <option value="multifunctional modular">Multifunctional Modular</option>
+                        <option value="vintage sustainable pieces">Vintage Sustainable Pieces</option>
+                        <option value="handcrafted artisan made">Handcrafted Artisan Made</option>
+                        <option value="soft plush comfortable">Soft Plush Comfortable</option>
+                        <option value="natural wood organic">Natural Wood Organic</option>
+                        <option value="mixed material contemporary">Mixed Material Contemporary</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <h3>💡 Lighting Style</h3>
+                    <select id="lightingStyle">
+                        <option value="natural golden hour">Natural Golden Hour</option>
+                        <option value="warm circadian lighting">Warm Circadian Lighting</option>
+                        <option value="ceramic pendant lights">Ceramic Pendant Lights</option>
+                        <option value="soft ambient wellness">Soft Ambient Wellness</option>
+                        <option value="architectural spotlighting">Architectural Spotlighting</option>
+                        <option value="textured wall lighting">Textured Wall Lighting</option>
+                        <option value="metallic accent lighting">Metallic Accent Lighting</option>
+                        <option value="mood setting dramatic">Mood Setting Dramatic</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <h3>🎯 Photography Focus</h3>
+                    <select id="photoFocus">
+                        <option value="wide angle room overview">Wide Angle Room Overview</option>
+                        <option value="close up texture details">Close-Up Texture Details</option>
+                        <option value="diagonal perspective depth">Diagonal Perspective Depth</option>
+                        <option value="aerial top down view">Aerial Top-Down View</option>
+                        <option value="corner vignette style">Corner Vignette Style</option>
+                        <option value="architectural lines focus">Architectural Lines Focus</option>
+                        <option value="material contrast emphasis">Material Contrast Emphasis</option>
+                        <option value="lifestyle lived in feel">Lifestyle Lived-In Feel</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Midjourney Section -->
+            <div class="midjourney-section">
+                <h2>🤖 Discord Midjourney V7 Settings</h2>
+                <div class="midjourney-controls">
+                    <div class="mj-control-group">
+                        <h3>📐 Aspect Ratio</h3>
+                        <select id="aspectRatio">
+                            <option value="16:9">16:9 (Landscape Interior)</option>
+                            <option value="4:3">4:3 (Standard Room)</option>
+                            <option value="1:1">1:1 (Square Social Media)</option>
+                            <option value="3:4">3:4 (Portrait Detail)</option>
+                            <option value="21:9">21:9 (Ultra Wide Space)</option>
+                        </select>
+                    </div>
+
+                    <div class="mj-control-group">
+                        <h3>🎨 Version</h3>
+                        <select id="mjVersion">
+                            <option value="7">Version 7 (Latest)</option>
+                            <option value="6.1">Version 6.1</option>
+                            <option value="6">Version 6</option>
+                        </select>
+                    </div>
+
+                    <div class="mj-control-group">
+                        <h3>🎭 Style Mode</h3>
+                        <select id="styleMode">
+                            <option value="raw">Raw (Realistic Interior)</option>
+                            <option value="scenic">Scenic (Enhanced Atmosphere)</option>
+                            <option value="">Default (Balanced)</option>
+                        </select>
+                    </div>
+
+                    <div class="mj-control-group">
+                        <h3>⚡ Quality</h3>
+                        <select id="quality">
+                            <option value="2">Quality 2 (Maximum Detail)</option>
+                            <option value="1">Quality 1 (Standard)</option>
+                            <option value="0.5">Quality 0.5 (Faster)</option>
+                        </select>
+                    </div>
+
+                    <div class="mj-control-group">
+                        <h3>🎯 Stylize</h3>
+                        <select id="stylize">
+                            <option value="100">100 (Realistic Interior)</option>
+                            <option value="250">250 (Moderate Style)</option>
+                            <option value="500">500 (Balanced)</option>
+                            <option value="750">750 (Artistic Interior)</option>
+                        </select>
+                    </div>
+
+                    <div class="mj-control-group">
+                        <h3>🌸 Chaos</h3>
+                        <select id="chaos">
+                            <option value="0">0 (Precise Layout)</option>
+                            <option value="25">25 (Slight Variation)</option>
+                            <option value="50">50 (Moderate)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="btn" onclick="generateStandardPrompt()">🎨 Generate Standard Prompt</button>
+                <button class="btn btn-midjourney" onclick="generateMidjourneyPrompt()">🤖 Generate Midjourney V7</button>
+                <button class="btn btn-secondary" onclick="randomizeCurrentTab()">🎲 Random Current Category</button>
+                <button class="btn btn-secondary" onclick="resetAll()">🔄 Reset All</button>
+            </div>
+
+            <!-- Support Section -->
+            <div class="support-section">
+                <div class="support-content">
+                    <h3 class="support-title">🏠 Support Interior Design Research</h3>
+                    <p class="support-text">
+                        Generator ini dibuat berdasarkan riset mendalam Adobe Stock 2025 trends untuk interior design. 
+                        Dukungan Anda membantu pengembangan tools untuk visual content creators!
+                    </p>
+                    
+                    <div class="features-highlight">
+                        <div class="feature-item">
+                            <span>🤎</span>
+                            <span>Mocha & Earth Tones</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>💎</span>
+                            <span>Jewel & Metallic</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🌿</span>
+                            <span>Natural Materials</span>
+                        </div>
+                        <div class="feature-item">
+                            <span>🏡</span>
+                            <span>Smart Living</span>
+                        </div>
+                    </div>
+
+                    <a href="https://trakteer.id/anton-prafanto-nszpm/tip?quantity=1" 
+                       target="_blank" 
+                       class="donate-btn"
+                       onclick="trackDonation()">
+                        <span class="heart-icon">💖</span>
+                        <span>Traktir Developer-nya Kopi yuk</span>
+                        <span>🏠</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="result" id="result" style="display: none;">
+                <h3>🏠 Your Interior Design Prompt:</h3>
+                <div class="prompt-text" id="promptText"></div>
+                <button class="copy-btn" onclick="copyPrompt()">📋 Copy Prompt</button>
+            </div>
+
+            <div class="result" id="mjResult" style="display: none; background: linear-gradient(135deg, #7289da 10%, #5865f2 90%); border: 3px solid #7289da;">
+                <h3 style="color: white;">🤖 Discord Midjourney V7 Command:</h3>
+                <div class="prompt-text" id="mjPromptText" style="background: rgba(255,255,255,0.95); color: #333;"></div>
+                <button class="copy-btn" onclick="copyMjPrompt()" style="background: #fff; color: #7289da;">📋 Copy to Discord</button>
+                
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                    <h4 style="color: white; margin-bottom: 15px;">🏠 2025 Interior Trends Pro Tips:</h4>
+                    <ul style="color: white; opacity: 0.9; font-size: 14px; line-height: 1.7;">
+                        <li>Mocha Tones: Gunakan V7 + Raw style untuk natural authenticity</li>
+                        <li>Jewel Colors: Fokus pada luxury accent dengan balanced stylize</li>
+                        <li>Natural Materials: Emphasize texture details dan organic elements</li>
+                        <li>Smart Living: Tampilkan technology integration tanpa manusia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🏠 Berdasarkan Riset Adobe Stock 2025 Interior Trends • 62M+ Interior Images • Mocha Mousse Pantone 2025</p>
+            <p style="margin-top: 10px;">💡 Support Midjourney V7 • Natural Materials & Smart Living • 100% tanpa makhluk hidup • Pure interior aesthetics</p>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'mocha-earth';
+        let lastGenerationMode = 'midjourney';
+
+        // Tab switching functionality
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            document.querySelectorAll('.controls').forEach(controls => {
+                controls.classList.add('hidden');
+            });
+            
+            document.getElementById(tab + '-tab').classList.remove('hidden');
+            
+            // Show appropriate controls
+            if (tab === 'mocha-earth') {
+                document.getElementById('mocha-earth-controls').classList.remove('hidden');
+            } else {
+                createControlsForTab(tab);
+            }
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            currentTab = tab;
+            
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('mjResult').style.display = 'none';
+        }
+
+        function createControlsForTab(tab) {
+            let existingControls = document.getElementById(tab + '-controls');
+            if (existingControls) {
+                existingControls.classList.remove('hidden');
+                return;
+            }
+
+            const controlsContainer = document.createElement('div');
+            controlsContainer.className = 'controls';
+            controlsContainer.id = tab + '-controls';
+
+            if (tab === 'jewel-metallic') {
+                controlsContainer.innerHTML = createJewelMetallicControls();
+            } else if (tab === 'natural-materials') {
+                controlsContainer.innerHTML = createNaturalMaterialsControls();
+            } else if (tab === 'smart-living') {
+                controlsContainer.innerHTML = createSmartLivingControls();
+            }
+
+            document.getElementById('mocha-earth-controls').parentNode.insertBefore(controlsContainer, document.getElementById('mocha-earth-controls').nextSibling);
+        }
+
+        function createJewelMetallicControls() {
+            return `
+                <div class="control-group">
+                    <h3>💎 Jewel Color</h3>
+                    <select id="jewelColor">
+                        <option value="emerald green luxury accent">Emerald Green Luxury</option>
+                        <option value="sapphire blue deep dramatic">Sapphire Blue Deep</option>
+                        <option value="amethyst purple rich royal">Amethyst Purple Rich</option>
+                        <option value="ruby red bold statement">Ruby Red Bold Statement</option>
+                        <option value="topaz golden warm">Topaz Golden Warm</option>
+                        <option value="aquamarine blue green">Aquamarine Blue-Green</option>
+                        <option value="garnet deep burgundy">Garnet Deep Burgundy</option>
+                        <option value="citrine yellow bright">Citrine Yellow Bright</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>✨ Metallic Finish</h3>
+                    <select id="metallicFinish">
+                        <option value="brass black mixed metals">Brass-Black Mixed Metals</option>
+                        <option value="chrome silver revival">Chrome Silver Revival</option>
+                        <option value="gold warm luxury">Gold Warm Luxury</option>
+                        <option value="copper bronze warm">Copper Bronze Warm</option>
+                        <option value="brushed nickel modern">Brushed Nickel Modern</option>
+                        <option value="matte black sophisticated">Matte Black Sophisticated</option>
+                        <option value="antique brass vintage">Antique Brass Vintage</option>
+                        <option value="stainless steel clean">Stainless Steel Clean</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>💫 Luxury Elements</h3>
+                    <select id="luxuryElements">
+                        <option value="velvet textures opulent">Velvet Textures Opulent</option>
+                        <option value="marble natural veining">Marble Natural Veining</option>
+                        <option value="crystal chandeliers">Crystal Chandeliers</option>
+                        <option value="silk drapery flowing">Silk Drapery Flowing</option>
+                        <option value="leather rich patina">Leather Rich Patina</option>
+                        <option value="glass reflective surfaces">Glass Reflective Surfaces</option>
+                        <option value="mirror dramatic placement">Mirror Dramatic Placement</option>
+                        <option value="precious metal accents">Precious Metal Accents</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>🎯 Jewel Application</h3>
+                    <select id="jewelApplication">
+                        <option value="accent wall statement">Accent Wall Statement</option>
+                        <option value="furniture focal pieces">Furniture Focal Pieces</option>
+                        <option value="lighting fixtures dramatic">Lighting Fixtures Dramatic</option>
+                        <option value="textile patterns rich">Textile Patterns Rich</option>
+                        <option value="artwork gallery wall">Artwork Gallery Wall</option>
+                        <option value="decorative objects luxury">Decorative Objects Luxury</option>
+                        <option value="cabinet hardware details">Cabinet Hardware Details</option>
+                        <option value="flooring inlay accents">Flooring Inlay Accents</option>
+                    </select>
+                </div>
+            `;
+        }
+
+        function createNaturalMaterialsControls() {
+            return `
+                <div class="control-group">
+                    <h3>🏺 Natural Material</h3>
+                    <select id="naturalMaterial">
+                        <option value="ceramic clay pottery">Ceramic Clay Pottery</option>
+                        <option value="natural stone travertine">Natural Stone Travertine</option>
+                        <option value="wood grain organic">Wood Grain Organic</option>
+                        <option value="bamboo sustainable">Bamboo Sustainable</option>
+                        <option value="rattan woven natural">Rattan Woven Natural</option>
+                        <option value="cork eco friendly">Cork Eco-Friendly</option>
+                        <option value="marble calacatta gold">Marble Calacatta Gold</option>
+                        <option value="hemp organic textiles">Hemp Organic Textiles</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>🌱 Sustainability Focus</h3>
+                    <select id="sustainabilityFocus">
+                        <option value="recycled materials upcycled">Recycled Materials Upcycled</option>
+                        <option value="locally sourced regional">Locally Sourced Regional</option>
+                        <option value="zero waste design">Zero Waste Design</option>
+                        <option value="renewable resources">Renewable Resources</option>
+                        <option value="biodegradable elements">Biodegradable Elements</option>
+                        <option value="energy efficient systems">Energy Efficient Systems</option>
+                        <option value="non toxic finishes">Non-Toxic Finishes</option>
+                        <option value="circular economy design">Circular Economy Design</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>✋ Craftsmanship Style</h3>
+                    <select id="craftsmanshipStyle">
+                        <option value="handmade artisan details">Handmade Artisan Details</option>
+                        <option value="traditional techniques modern">Traditional Techniques Modern</option>
+                        <option value="organic imperfect beauty">Organic Imperfect Beauty</option>
+                        <option value="wabi sabi aesthetic">Wabi-Sabi Aesthetic</option>
+                        <option value="live edge wood">Live Edge Wood</option>
+                        <option value="hand thrown ceramics">Hand-Thrown Ceramics</option>
+                        <option value="traditional weaving patterns">Traditional Weaving Patterns</option>
+                        <option value="carved details intricate">Carved Details Intricate</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>🎯 Natural Application</h3>
+                    <select id="naturalApplication">
+                        <option value="biophilic design integration">Biophilic Design Integration</option>
+                        <option value="earth connection grounding">Earth Connection Grounding</option>
+                        <option value="wellness focused spaces">Wellness Focused Spaces</option>
+                        <option value="sustainable luxury">Sustainable Luxury</option>
+                        <option value="organic modern blend">Organic Modern Blend</option>
+                        <option value="eco conscious living">Eco-Conscious Living</option>
+                        <option value="natural harmony balance">Natural Harmony Balance</option>
+                        <option value="environmental mindfulness">Environmental Mindfulness</option>
+                    </select>
+                </div>
+            `;
+        }
+
+        function createSmartLivingControls() {
+            return `
+                <div class="control-group">
+                    <h3>🤖 Smart Technology</h3>
+                    <select id="smartTechnology">
+                        <option value="hidden integrated seamless">Hidden Integrated Seamless</option>
+                        <option value="voice control systems">Voice Control Systems</option>
+                        <option value="automated lighting smart">Automated Lighting Smart</option>
+                        <option value="climate control precision">Climate Control Precision</option>
+                        <option value="wireless charging stations">Wireless Charging Stations</option>
+                        <option value="smart mirror displays">Smart Mirror Displays</option>
+                        <option value="automated window treatments">Automated Window Treatments</option>
+                        <option value="air quality monitoring">Air Quality Monitoring</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>💪 Wellness Focus</h3>
+                    <select id="wellnessFocus">
+                        <option value="home gym equipment">Home Gym Equipment</option>
+                        <option value="meditation corner peaceful">Meditation Corner Peaceful</option>
+                        <option value="reading nook cozy">Reading Nook Cozy</option>
+                        <option value="yoga space zen">Yoga Space Zen</option>
+                        <option value="spa bathroom retreat">Spa Bathroom Retreat</option>
+                        <option value="ergonomic workspace">Ergonomic Workspace</option>
+                        <option value="circadian lighting health">Circadian Lighting Health</option>
+                        <option value="air purifying plants">Air Purifying Plants</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>🔧 Multi-functional</h3>
+                    <select id="multiFunctional">
+                        <option value="convertible furniture">Convertible Furniture</option>
+                        <option value="modular seating system">Modular Seating System</option>
+                        <option value="hidden storage solutions">Hidden Storage Solutions</option>
+                        <option value="transforming workspace">Transforming Workspace</option>
+                        <option value="expandable dining table">Expandable Dining Table</option>
+                        <option value="murphy bed modern">Murphy Bed Modern</option>
+                        <option value="ottoman storage seating">Ottoman Storage Seating</option>
+                        <option value="wall mounted folding">Wall-Mounted Folding</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <h3>🎯 Smart Application</h3>
+                    <select id="smartApplication">
+                        <option value="work from home efficiency">Work From Home Efficiency</option>
+                        <option value="small space optimization">Small Space Optimization</option>
+                        <option value="modern family living">Modern Family Living</option>
+                        <option value="tech savvy lifestyle">Tech-Savvy Lifestyle</option>
+                        <option value="minimalist smart design">Minimalist Smart Design</option>
+                        <option value="future ready interiors">Future-Ready Interiors</option>
+                        <option value="connected home ecosystem">Connected Home Ecosystem</option>
+                        <option value="intelligent space design">Intelligent Space Design</option>
+                    </select>
+                </div>
+            `;
+        }
+
+        // Generate standard prompt
+        function generateStandardPrompt() {
+            lastGenerationMode = 'standard';
+            updateButtonStates();
+            
+            let prompt = '';
+            
+            if (currentTab === 'mocha-earth') {
+                const brownPalette = document.getElementById('brownPalette').value;
+                const roomType = document.getElementById('roomType').value;
+                const interiorStyle = document.getElementById('interiorStyle').value;
+                const furnitureElements = document.getElementById('furnitureElements').value;
+                const lightingStyle = document.getElementById('lightingStyle').value;
+                const photoFocus = document.getElementById('photoFocus').value;
+                
+                prompt = `Create a stunning ${roomType} featuring ${brownPalette} color palette in ${interiorStyle} style. Include ${furnitureElements} furniture with ${lightingStyle} illumination. Capture with ${photoFocus} perspective. Ultra-high 4K resolution, professionally designed following 2025 Adobe Stock interior trends including Pantone Mocha Mousse, earth-tone aesthetics, natural warmth, and sustainable design principles. No human figures or living creatures, pure interior design visualization focusing on space, materials, and atmosphere.`;
+            }
+            else if (currentTab === 'jewel-metallic') {
+                const jewelColor = document.getElementById('jewelColor').value;
+                const metallicFinish = document.getElementById('metallicFinish').value;
+                const luxuryElements = document.getElementById('luxuryElements').value;
+                const application = document.getElementById('jewelApplication').value;
+                
+                prompt = `Design an opulent interior space showcasing ${jewelColor} with ${metallicFinish} accents. Feature ${luxuryElements} and emphasize ${application}. Ultra-high 4K resolution, expertly crafted following 2025 Adobe Stock luxury trends including jewel tones, mixed metals, and sophisticated elegance. Focus on pure luxury interior design without human elements, emphasizing rich colors and premium materials.`;
+            }
+            else if (currentTab === 'natural-materials') {
+                const naturalMaterial = document.getElementById('naturalMaterial').value;
+                const sustainability = document.getElementById('sustainabilityFocus').value;
+                const craftsmanship = document.getElementById('craftsmanshipStyle').value;
+                const application = document.getElementById('naturalApplication').value;
+                
+                prompt = `Develop a beautiful interior featuring ${naturalMaterial} with ${sustainability} principles. Showcase ${craftsmanship} in ${application} design approach. Ultra-high 4K resolution, professionally created following 2025 Adobe Stock natural materials trends including sustainable design, artisan craftsmanship, and biophilic integration. Pure material-focused interior without human presence, emphasizing natural textures and organic elements.`;
+            }
+            else if (currentTab === 'smart-living') {
+                const smartTech = document.getElementById('smartTechnology').value;
+                const wellness = document.getElementById('wellnessFocus').value;
+                const multiFunc = document.getElementById('multiFunctional').value;
+                const application = document.getElementById('smartApplication').value;
+                
+                prompt = `Create a sophisticated interior featuring ${smartTech} integration with ${wellness} elements. Include ${multiFunc} solutions for ${application}. Ultra-high 4K resolution, expertly designed following 2025 Adobe Stock smart living trends including technology integration, wellness focus, and modern functionality. Focus on pure smart interior design without human figures, showcasing technology and intelligent space design.`;
+            }
+
+            document.getElementById('promptText').textContent = prompt;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('mjResult').style.display = 'none';
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Generate Midjourney prompt
+        function generateMidjourneyPrompt() {
+            lastGenerationMode = 'midjourney';
+            updateButtonStates();
+            
+            let basePrompt = '';
+            
+            if (currentTab === 'mocha-earth') {
+                const brownPalette = document.getElementById('brownPalette').value;
+                const roomType = document.getElementById('roomType').value;
+                const interiorStyle = document.getElementById('interiorStyle').value;
+                const lightingStyle = document.getElementById('lightingStyle').value;
+                
+                basePrompt = `${roomType}, ${brownPalette}, ${interiorStyle}, ${lightingStyle}, professional interior design, Adobe Stock style, 2025 mocha trends, Pantone 2025, no humans, warm atmosphere, ultra detailed`;
+            }
+            else if (currentTab === 'jewel-metallic') {
+                const jewelColor = document.getElementById('jewelColor').value;
+                const metallicFinish = document.getElementById('metallicFinish').value;
+                const luxuryElements = document.getElementById('luxuryElements').value;
+                
+                basePrompt = `${jewelColor}, ${metallicFinish}, ${luxuryElements}, professional luxury interior, Adobe Stock style, 2025 jewel trends, sophisticated elegance, no humans, premium materials, ultra detailed`;
+            }
+            else if (currentTab === 'natural-materials') {
+                const naturalMaterial = document.getElementById('naturalMaterial').value;
+                const sustainability = document.getElementById('sustainabilityFocus').value;
+                const craftsmanship = document.getElementById('craftsmanshipStyle').value;
+                
+                basePrompt = `${naturalMaterial}, ${sustainability}, ${craftsmanship}, professional natural interior, Adobe Stock style, 2025 sustainable trends, biophilic design, no humans, organic textures, ultra detailed`;
+            }
+            else if (currentTab === 'smart-living') {
+                const smartTech = document.getElementById('smartTechnology').value;
+                const wellness = document.getElementById('wellnessFocus').value;
+                const multiFunc = document.getElementById('multiFunctional').value;
+                
+                basePrompt = `${smartTech}, ${wellness}, ${multiFunc}, professional smart interior, Adobe Stock style, 2025 technology trends, modern lifestyle, no humans, intelligent design, ultra detailed`;
+            }
+
+            const aspectRatio = document.getElementById('aspectRatio').value;
+            const mjVersion = document.getElementById('mjVersion').value;
+            const styleMode = document.getElementById('styleMode').value;
+            const quality = document.getElementById('quality').value;
+            const stylize = document.getElementById('stylize').value;
+            const chaos = document.getElementById('chaos').value;
+
+            const mjPrompt = `/imagine prompt: ${basePrompt}`;
+            let parameters = ` --ar ${aspectRatio} --v ${mjVersion} --q ${quality} --s ${stylize} --c ${chaos}`;
+            
+            if (styleMode) {
+                parameters += ` --style ${styleMode}`;
+            }
+
+            const fullMjCommand = mjPrompt + parameters;
+
+            document.getElementById('mjPromptText').textContent = fullMjCommand;
+            document.getElementById('mjResult').style.display = 'block';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('mjResult').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateButtonStates() {
+            const standardBtn = document.querySelector('button[onclick="generateStandardPrompt()"]');
+            const midjourneyBtn = document.querySelector('button[onclick="generateMidjourneyPrompt()"]');
+            const randomBtn = document.querySelector('button[onclick="randomizeCurrentTab()"]');
+            
+            standardBtn.style.opacity = lastGenerationMode === 'standard' ? '1' : '0.7';
+            midjourneyBtn.style.opacity = lastGenerationMode === 'midjourney' ? '1' : '0.7';
+            
+            randomBtn.innerHTML = lastGenerationMode === 'standard' ? '🎲 Random Standard' : '🎲 Random Midjourney';
+        }
+
+        function randomizeCurrentTab() {
+            const controls = document.getElementById(currentTab + '-controls');
+            const selects = controls.querySelectorAll('select');
+            
+            selects.forEach(select => {
+                const options = select.options;
+                const randomIndex = Math.floor(Math.random() * options.length);
+                select.selectedIndex = randomIndex;
+            });
+            
+            if (lastGenerationMode === 'standard') {
+                generateStandardPrompt();
+            } else {
+                generateMidjourneyPrompt();
+            }
+        }
+
+        function resetAll() {
+            document.querySelectorAll('select').forEach(select => {
+                select.selectedIndex = 0;
+            });
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('mjResult').style.display = 'none';
+            lastGenerationMode = 'midjourney';
+            updateButtonStates();
+        }
+
+        function copyPrompt() {
+            const promptText = document.getElementById('promptText').textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const button = document.querySelector('#result .copy-btn');
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.style.background = '#28a745';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = 'linear-gradient(135deg, #17a2b8 0%, #138496 100%)';
+                }, 2000);
+            });
+        }
+
+        function copyMjPrompt() {
+            const mjPromptText = document.getElementById('mjPromptText').textContent;
+            navigator.clipboard.writeText(mjPromptText).then(() => {
+                const button = document.querySelector('#mjResult .copy-btn');
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied to Discord!';
+                button.style.background = '#28a745';
+                button.style.color = 'white';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#fff';
+                    button.style.color = '#7289da';
+                }, 2000);
+            });
+        }
+
+        // Preset functions
+        function setMochaPreset(type) {
+            document.getElementById('mjVersion').value = '7';
+            document.getElementById('quality').value = '2';
+            document.getElementById('styleMode').value = 'raw';
+            document.getElementById('stylize').value = '100';
+            document.getElementById('chaos').value = '0';
+            
+            switch(type) {
+                case 'mocha-living':
+                    document.getElementById('brownPalette').value = 'mocha mousse pantone 2025';
+                    document.getElementById('roomType').value = 'modern living room';
+                    document.getElementById('interiorStyle').value = 'japandi minimalist zen';
+                    document.getElementById('furnitureElements').value = 'low slung 1970s inspired';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'earth-kitchen':
+                    document.getElementById('brownPalette').value = 'clay toned brown earthy';
+                    document.getElementById('roomType').value = 'contemporary kitchen';
+                    document.getElementById('interiorStyle').value = 'warm minimalism cozy';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'clay-bathroom':
+                    document.getElementById('brownPalette').value = 'terracotta clay orange';
+                    document.getElementById('roomType').value = 'spa bathroom';
+                    document.getElementById('interiorStyle').value = 'sustainable eco luxury';
+                    document.getElementById('aspectRatio').value = '4:3';
+                    break;
+                case 'walnut-office':
+                    document.getElementById('brownPalette').value = 'walnut deep chocolate';
+                    document.getElementById('roomType').value = 'home office workspace';
+                    document.getElementById('interiorStyle').value = 'scandinavian evolved modern';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'terracotta-dining':
+                    document.getElementById('brownPalette').value = 'terracotta clay orange';
+                    document.getElementById('roomType').value = 'dining room';
+                    document.getElementById('interiorStyle').value = 'maximalist layered textures';
+                    document.getElementById('aspectRatio').value = '4:3';
+                    break;
+                case 'brown-bedroom':
+                    document.getElementById('brownPalette').value = 'rich mahogany dark';
+                    document.getElementById('roomType').value = 'master bedroom';
+                    document.getElementById('interiorStyle').value = 'quiet luxury understated';
+                    document.getElementById('aspectRatio').value = '3:4';
+                    break;
+            }
+            generateMidjourneyPrompt();
+        }
+
+        function setJewelPreset(type) {
+            createControlsForTab('jewel-metallic');
+            document.getElementById('mjVersion').value = '7';
+            
+            switch(type) {
+                case 'emerald-luxury':
+                    document.getElementById('jewelColor').value = 'emerald green luxury accent';
+                    document.getElementById('metallicFinish').value = 'gold warm luxury';
+                    document.getElementById('luxuryElements').value = 'velvet textures opulent';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'sapphire-kitchen':
+                    document.getElementById('jewelColor').value = 'sapphire blue deep dramatic';
+                    document.getElementById('metallicFinish').value = 'brass black mixed metals';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'brass-black':
+                    document.getElementById('metallicFinish').value = 'brass black mixed metals';
+                    document.getElementById('luxuryElements').value = 'marble natural veining';
+                    document.getElementById('aspectRatio').value = '4:3';
+                    break;
+            }
+            generateMidjourneyPrompt();
+        }
+
+        function setNaturalPreset(type) {
+            createControlsForTab('natural-materials');
+            document.getElementById('mjVersion').value = '7';
+            
+            switch(type) {
+                case 'ceramic-kitchen':
+                    document.getElementById('naturalMaterial').value = 'ceramic clay pottery';
+                    document.getElementById('sustainabilityFocus').value = 'locally sourced regional';
+                    document.getElementById('craftsmanshipStyle').value = 'handmade artisan details';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'stone-bathroom':
+                    document.getElementById('naturalMaterial').value = 'natural stone travertine';
+                    document.getElementById('sustainabilityFocus').value = 'renewable resources';
+                    document.getElementById('aspectRatio').value = '4:3';
+                    break;
+            }
+            generateMidjourneyPrompt();
+        }
+
+        function setSmartPreset(type) {
+            createControlsForTab('smart-living');
+            document.getElementById('mjVersion').value = '7';
+            
+            switch(type) {
+                case 'home-office':
+                    document.getElementById('smartTechnology').value = 'hidden integrated seamless';
+                    document.getElementById('wellnessFocus').value = 'ergonomic workspace';
+                    document.getElementById('multiFunctional').value = 'transforming workspace';
+                    document.getElementById('aspectRatio').value = '16:9';
+                    break;
+                case 'wellness-room':
+                    document.getElementById('wellnessFocus').value = 'home gym equipment';
+                    document.getElementById('smartTechnology').value = 'air quality monitoring';
+                    document.getElementById('aspectRatio').value = '4:3';
+                    break;
+            }
+            generateMidjourneyPrompt();
+        }
+
+        function trackDonation() {
+            console.log('Interior Design tool donation clicked - Thank you for supporting interior research!');
+        }
+
+        // Initialize
+        window.onload = function() {
+            setMochaPreset('mocha-living');
+            updateButtonStates();
+        }
+    </script>
+</body>
+</html>
